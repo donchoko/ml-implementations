@@ -23,6 +23,9 @@ lwr <- function(x,y,t,colr){
   
   plot(x,y)
   o <- order(x)
-  lines(ix[o],res[o],col=colr)
+  abline(pTheta,col='cyan',lwd=2)
+  lines(x[o],theta[o],col=colr,lwd=2)
+  legend(1450,7,c('ULR',paste('LWR ',t)),
+  lty=c(1,1),lwd=c(2,2),col=c('cyan',colr))
   return(theta)
 }
